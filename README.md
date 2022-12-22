@@ -11,3 +11,5 @@ Within this projects there are 3 main site:
   This is the environment for the DAO dashboard.
   
 The structure for the SQL database has been added to /SQL Database
+
+To see the website in a live environmnet visit www.blockchainminor.nl 
