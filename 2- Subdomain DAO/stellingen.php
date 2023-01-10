@@ -87,7 +87,7 @@
           </div><!-- End Default Card --><? 
         }
       } else {
-        echo "Geen actieve stellingen";
+        echo "<center>Geen actieve stellingen gevonden</center>";
       } ?> 
     </div>
       <hr style="color: #cddfff;">
@@ -119,10 +119,13 @@
                   </div> <br>
                     <div class="progress">
                       <? if ($TotaalAantal == 0) { ?>
-                         <div class="progress-bar bg-secondary" role="progressbar" style="width: 100%;">Er is nog niet gestemd</div>  <?                     
-                      } else { ?>
-                        <div class="progress-bar bg-success" role="progressbar" style="width: <? echo $ProcentVoor ?>%"><? echo $ProcentVoor ?>%</div>
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: <? echo $ProcentTegen ?>%"><? echo $ProcentTegen ?>%</div><?
+                         <div class="progress-bar bg-secondary" role="progressbar" style="width: 100%;">Er is niet gestemd op de stelling</div>  <?                     
+                      } else { 
+                        if (WhoWon($row['ID'], $conn) == "1") { ?>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">Stelling heeft gewonnen</div><?
+                        } else { ?>
+                          <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;">De stelling is beëindigd met meerdere stemmen tegen</div><?
+                        }                        
                       } ?>
                     </div> 
                   </div>           

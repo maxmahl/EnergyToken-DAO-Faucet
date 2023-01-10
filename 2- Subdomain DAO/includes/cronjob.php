@@ -55,6 +55,9 @@
               });
             })
 
+            //Sleep om cronjob genoeg tijd te geven
+            sleep(50);
+
           </script><?
         } else {
           AddLog('(Cronjob) Stelling #'.$row['ID'].' is afgelopen maar heeft niet meer dan 50% van de stemmen..' , $conn);

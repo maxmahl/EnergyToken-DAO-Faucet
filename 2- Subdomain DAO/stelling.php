@@ -214,8 +214,10 @@
                     <tr><?
                         if ($row['UserID'] == $GebruikerID) { ?>
                           <td><b><i class="bi bi-star me-1"></i> <? echo GetUserWalletID($row['UserID'], $conn); ?></b></td> <?
-                        } else { ?>
+                        } elseif (null !== GetUserWalletID($row['UserID'], $conn)) { ?>
                           <td><? echo GetUserWalletID($row['UserID'], $conn); ?></td> <? 
+                        } else { ?>
+                          <td><i>Gebruiker niet gevonden</i></td> <? 
                         }
                         
                         if ($row['Stemming'] === "Tegen") { ?>
@@ -227,9 +229,11 @@
                         } ?>
                           <td><? echo $row['Aantal'];?></td>
                           <td><? echo $row['Tokens'];?></td> <?
+                          // Voor administrators om het gebruikers profiel te bezoeken
                           if ($Rank === "Administrator") { ?>
                             <td><a href="profiel.php?ID=<?php echo $row['UserID']; ?>"><i class="bi bi-arrow-right"></i></a></td> <?
-                          }  ?>                      
+                          }  ?>
+
                     </tr> <?
                   } 
                 } else { ?>

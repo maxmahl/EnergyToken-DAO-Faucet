@@ -82,23 +82,41 @@
                 </div>
               </div>
 
-            </div><!-- End Customers Card -->
+            </div><!-- End Customers Card --> <?
 
+        // Als gebruiker administrator is zie admin power bi 
+        if ($Rank === "Administrator") { ?>
+        <div class="pagetitle">
+          <h1>Inzicht gebruikers</h1>
+        </div>
         <div class="col-12">
           <div class="card recent-sales overflow-auto">
             <div class="card-body">
-              <h5 class="card-title">Overzicht van gebruikers</span></h5>
                 <center>
-                  <a href="https://app.powerbi.com/groups/me/reports/37c9e40a-54db-4dda-966e-4e077599c5e6/ReportSection">
-                    <img style="width: 80%;" src="https://blockchainminor.nl/DAO/assets/img/PowerBI_Administrator.jpg">
-                  </a>
+                  <br>
+                  <iframe title="Administrator - Administrator" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYWI5NjRmN2QtZWY0ZS00ODA2LTg4MjAtNjlhMDA2MjBiMGU1IiwidCI6ImYzMjgzMDAzLTk3NmYtNDQxNi1hOGFjLWIyMDVhOTY3YmZlOSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
                 </center>            
               </div>
             </div>
           </div>
         </div>
-
-
+        <!-- Anders zie persoonlijk scherm --><?
+        } else { ?>
+          <div class="pagetitle">
+            <h1>Inzicht zonnenpanelen</h1>
+          </div>
+          <div class="col-12">
+            <div class="card recent-sales overflow-auto">
+              <div class="card-body">
+                  <center>
+                    <br>
+                    <iframe title="Persoonlijk & met zoeken" width="100%" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiOGE3NzQ1NzktZjk2Mi00MGIxLWFlNDQtMjZlMDVjZmExYzRlIiwidCI6ImYzMjgzMDAzLTk3NmYtNDQxNi1hOGFjLWIyMDVhOTY3YmZlOSIsImMiOjl9&pageName=ReportSection8280b8a00d2d2c1a630a" frameborder="0" allowFullScreen="true"></iframe>
+                  </center>            
+                </div>
+              </div>
+            </div>
+          </div><?
+        } ?>
 
     </section>
 
