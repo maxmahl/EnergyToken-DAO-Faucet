@@ -18,4 +18,4 @@ Voor gebruikers en administrators zijn er PowerBI dashboards aangemaakt. De gege
 
 Bij de code zijn annotaties neerzet zodat voor iedereen de gedachtegang achter de code snapt.
 
-Om de website in een live omgeving te zien, bezoek www.blockchainminor.nl
+Om de website in een live omgeving te zien, bezoek www.blockchainminor.nl en voor het demonstratie filmpje bezoek https://youtu.be/olZ2Xt1LnSA.
